@@ -1,0 +1,156 @@
+// general styles
+p {
+    width: 225px * 2;
+    padding-top: 10px;
+    color: $white;
+    font-size: 16px;
+    margin: 0;
+}
+
+// home page
+.header {
+    padding-top: 80px;
+    margin: 0 auto;
+    color: $white;
+    width: 525px;
+
+    h1 {
+        font-family: $brand-font;
+        font-size: 21px;
+    }
+}
+
+//asset guide container
+.asset-guide {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 50px;
+
+    p {
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    img {
+        margin: 0 auto;
+        display: block;
+        width: 400px;
+        padding-bottom: 25px;
+    }
+
+    ol {
+        padding-top: 15px;
+        margin: 0 auto;
+        width: 100%;
+        list-style: none;
+        counter-reset: li;
+        padding: 30px;
+
+        li {
+            color: black;
+            font-size: 12px;
+            counter-increment: li;
+        }
+    }
+}
+
+.instruction-block {
+    width: 600px;
+    background: white;
+
+    p {
+        width: 95%;
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+
+        &:last-of-type {
+            padding-top: 0;
+            font-weight: bolder;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+    }
+
+    ol {
+        li::before {
+            content: counter(li);
+            color: #5ABBA7;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em
+        }
+    }
+
+}
+// social instruction block
+.social {
+    border: 5px solid black;
+    border-right: none;
+    border-left: none;
+
+    p:first-of-type {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    ol {
+        padding-top: 10px;
+
+        li {
+            font-weight: bolder;
+        }
+
+        li::before {
+            content: counter(li);
+            color: black;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    }
+}
+// ppc instruction block
+.ppc {
+    border: 5px solid #5ABBA7;
+    border-right: none;
+    border-left: none;
+
+    li {
+        font-weight: bold;
+    }
+
+    span {
+        font-style: italic;
+        color: gray;
+    }
+}
+
+.asset-guide__buttons {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        margin: 8px;
+        background: $brand_orange;
+        padding: 5px;
+        width: 225px;
+        border-radius: 5px;
+        border: none;
+        color: $white;
+        font-size: 18px;
+        font-family: $brand_font;
+        text-align: center;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
